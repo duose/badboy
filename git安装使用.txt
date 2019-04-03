@@ -1,0 +1,16 @@
+1. rpm -qa | grep git
+2. rpm -e --nodeps git  或者  rpm -e git
+3. yum install git
+
+
+4. 创建Git仓库
+mkdir gitdemo       // 创建文件夹
+useradd zhangsan             //创建用户名并设置密码
+passwd zhangsan            //(系统会提示输入密码和再次密码)
+groupadd git        // 创建组
+git init --bare        //进入所创建的文件夹，初始化一个仓库
+chown -R zhangsan:git /git/gitdemo      // 赋权限
+
+5. 
+$ git config --global user.name "zhangsq"
+$ git config --global user.email "qzhangsq@126.com"
